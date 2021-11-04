@@ -1,17 +1,108 @@
-<!DOCTYPE html>
-<html lang="">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<!DOCTYPE HTML>
+<html lang="en">
+   <head>
+       <title>Virtual Burger World</title>
+       <meta charset="utf-8"/>
+   </head>
+   <body>
+   <header>
+   		<h1>Enter Virtual Burger World</h1>
+   </header>
+   <main>
+      <section>
+         <div>
+   		   <nav> <h3>Select burger</h3> </nav>
+   		   <p>This is where you choose your burger</p>
+   		</div>
+      </section>
+      
+      <section>
+      
+      	<div>
+         <span><h3>The Pus Burger</h3></span>
+   		<p><img src="https://static.wikia.nocookie.net/spongebob/images/b/b9/Nasty_Patty_061.png" alt="Span" title="Yummy" style="width: 300px;" style="float:left;"></p>
+   		<ul>
+    	<li>Awful, just awful</li>
+    	<li>Is a self-sustaining ecosystem</li>
+    	<li>Will actually kill you</li>
+		</ul>
+   		</div>
+      
+      	<div>
+         <span><h3>The Blight Burger</h3></span>
+   		<p><img src="https://www.adweek.com/wp-content/uploads/2020/02/burger-king-moldy-whopper-2020.jpg" alt="Span" title="Yummy" style="width: 300px;" style="float:left;"></p>
+   		   		<ul>
+    	<li>Contains over 95% of all diseases known to man</li>
+    	<li>Plus our secret recipe: Super-AIDS</li>
+    	<li>You will literally turn inside out</li>
+		</ul>
+   		</div>
+      
+      	<div>
+         <span><h3>The Eternal Darkness Will Envelop Us All-Burger</h3></span>
+   		<p><img src="https://pbs.twimg.com/media/BxU_pGYIEAEUAzG.jpg" alt="Span" title="Yummy" style="width: 300px;" style="clear:left;"></p>
+   		   		<ul>
+    	<li>Universal heat death is drawing ever closer</li>
+    	<li>The futility of our actions cannot be understated</li>
+    	<li>Even surrounded by others, we all die alone</li>
+		</ul>
+   		</div>
+   		
+      </section>
+      
+      <section>
+         <div>
+   		   <h3>Customer service</h3>
+   		   <p>
+    		<label for="name">First</label><br>
+    		<input type="text" id="name" name="fn" required="required" placeholder="Full name">
+			</p>
+
+			<p>
+   	 		<input type="email" id="email" name="em" required="required" placeholder="E-mail address">
+			</p>	
+			
+			<p>
+    		<label for="street">Last</label><br>
+    		<input type="text" id="street" name="ln" placeholder="Street name">
+			</p>
+			
+			<p>
+    		<label for="number">Last</label><br>
+    		<input type="number" id="number" name="ln" placeholder="Street number">
+			</p>
+   		</div>
+      </section>
+      
+      <section>
+      
+      <p>
+   		<label for="paymentmethod">Payment method</label><be>
+   		<select id="paymentmethod" name="rcp">
+       <option>Credit Card</option>
+       <option>Bitcoin</option>
+       <option>In nature</option>
+       <option>Voucher code</option>
+   		</select>
+		</p>
+      
+      <p>
+   		<input type="radio" id="male" name="gender" value="Male">
+		<label for="html">Male</label><br>
+		<input type="radio" id="female" name="gender" value="Female">
+		<label for="html">Female</label><br>
+		<input type="radio" id="other" name="gender" value="Other">
+		<label for="html">Other</label><br>
+		</p>
+		
+		<button type="submit">
+  		<img src="https://educaora.com/api/editors/6176786d68d9913b4bb2739c/published-files/image_button.png">
+		</button>
+		
+		</section>
+   </main>
+   <footer>
+      We do not take responsibility for adverse effects of ingesting our food.
+   </footer>
+   </body>
 </html>
