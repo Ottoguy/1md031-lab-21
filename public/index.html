@@ -3,6 +3,10 @@
    <head>
        <title>Virtual Burger World</title>
        <meta charset="utf-8"/>
+       <link rel="stylesheet" type="text/css" href="style.css">
+       <style>
+       @import url('https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap');
+       </style>
    </head>
    <body>
    <header>
@@ -16,32 +20,32 @@
    		</div>
       </section>
       
-      <section>
+      <section class="mainclass" id="wtbb">
       
-      	<div>
+      	<div style="float:left;">
          <span><h3>The Pus Burger</h3></span>
-   		<p><img src="https://static.wikia.nocookie.net/spongebob/images/b/b9/Nasty_Patty_061.png" alt="Span" title="Yummy" style="width: 300px;" style="float:left;"></p>
+   		<p><img src="https://static.wikia.nocookie.net/spongebob/images/b/b9/Nasty_Patty_061.png" alt="Span" title="Yummy" style="width: 300px;"></p>
    		<ul>
-    	<li>Awful, just awful</li>
     	<li>Is a self-sustaining ecosystem</li>
     	<li>Will actually kill you</li>
+    	<li>May contain traces of <span id="lactose">lactose</span></li>
 		</ul>
    		</div>
       
-      	<div>
+      	<div style="float:left;">
          <span><h3>The Blight Burger</h3></span>
-   		<p><img src="https://www.adweek.com/wp-content/uploads/2020/02/burger-king-moldy-whopper-2020.jpg" alt="Span" title="Yummy" style="width: 300px;" style="float:left;"></p>
+   		<p><img src="https://www.adweek.com/wp-content/uploads/2020/02/burger-king-moldy-whopper-2020.jpg" alt="Span" title="Yummy" style="width: 300px;"></p>
    		   		<ul>
     	<li>Contains over 95% of all diseases known to man</li>
-    	<li>Plus our secret recipe: Super-AIDS</li>
     	<li>You will literally turn inside out</li>
+    	<li>Contains <span id="gluten">gluten</span></li>
 		</ul>
    		</div>
       
-      	<div>
+      	<div style="float:left;">
          <span><h3>The Eternal Darkness Will Envelop Us All-Burger</h3></span>
-   		<p><img src="https://pbs.twimg.com/media/BxU_pGYIEAEUAzG.jpg" alt="Span" title="Yummy" style="width: 300px;" style="clear:left;"></p>
-   		   		<ul>
+   		<p><img src="https://pbs.twimg.com/media/BxU_pGYIEAEUAzG.jpg" alt="Span" title="Yummy" style="width: 300px;"></p>
+   		<ul>
     	<li>Universal heat death is drawing ever closer</li>
     	<li>The futility of our actions cannot be understated</li>
     	<li>Even surrounded by others, we all die alone</li>
@@ -50,25 +54,26 @@
    		
       </section>
       
-      <section>
+      <section id="service">
          <div>
    		   <h3>Customer service</h3>
    		   <p>
-    		<label for="name">First</label><br>
+    		<label for="name">Full name</label><br>
     		<input type="text" id="name" name="fn" required="required" placeholder="Full name">
 			</p>
 
 			<p>
+			<label for="street">E-mail address</label><br>
    	 		<input type="email" id="email" name="em" required="required" placeholder="E-mail address">
 			</p>	
 			
 			<p>
-    		<label for="street">Last</label><br>
+    		<label for="street">Street name</label><br>
     		<input type="text" id="street" name="ln" placeholder="Street name">
 			</p>
 			
 			<p>
-    		<label for="number">Last</label><br>
+    		<label for="number">Street number</label><br>
     		<input type="number" id="number" name="ln" placeholder="Street number">
 			</p>
    		</div>
