@@ -1,38 +1,162 @@
 @charset "UTF-8";
+
 @import url("reset.css");
-@import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
+
+@import
+	url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono")
+	;
 
 body {
-	font-family: 'Syne Mono',"Droid Serif", monospace;
-    font-size: 12pt;
+	font-family: 'Syne Mono', "Droid Serif", monospace !important;
+	font-size: 14px !important;
+	display: grid !important;
+	grid-gap: 10px !important;
 }
 
-a, strong, em {
-    color: #0099ff;
+header {
+	border: solid 2px yellow !important;
+	overflow: hidden;
+	margin-top: -100;
 }
 
-p.info,
-#login p {
-    width: 80%;
-    margin: 1vw auto;
+h1 {
+	position: absolute;
+	top: 18%;
+	font-size: 4em !important;
+	font-weight: bold !important;
+	font-size: 5em !important;
+	width: 100%;
+	text-align: center;
 }
 
-.mainclass {
-   color: #ff5500;
+h2 {
+	font-size: 3em !important;
+	width: 100%;
+	text-align: center;
 }
 
-#wtbb {
+h3 {
+	font-size: 2em !important;
+	width: 100%;
+	text-align: center;
+}
+
+h4 {
+	font-size: 1.5em !important;
+	width: 100%;
+	text-align: center;
+}
+
+p{
+	width: 100%;
+	text-align: center;
+}
+
+ul{
+	width: 100%;
+	text-align: center;
+}
+
+label{
+	font-size: 1.5em !important;
+}
+
+
+#banner {
+	width: 100%;
+	height: auto;
+	opacity: 50%;
+}
+
+.a {
+	border: solid 2px red;
 	color: white;
 	background: black;
+	border-radius: 5px;
+	padding: 20px;
+	grid-column: 1;
+	grid-row: 1;
+	display: grid;
+	grid-gap: 10px;
+}
+
+.b {
+	border: solid 2px green;
+	border-radius: 5px;
+	padding: 20px;
+	grid-column: 1;
+	grid-row: 2;
+	display: grid;
+	grid-gap: 10px;
+}
+
+.c {
+	border: solid 2px blue;
+	border-radius: 5px;
+	padding: 20px;
+	grid-column: 3;
+	grid-row: 3;
+}
+
+.aa {
+	border: dotted 2px yellow;
+	grid-column: 1/span 3;
+	grid-row: 1;
+}
+
+.ab {
+	border: dotted 2px red;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.ac {
+	border: dotted 2px green;
+	grid-column: 2;
+	grid-row: 2;
+}
+
+.ad {
+	border: dotted 2px blue;
+	grid-column: 3;
+	grid-row: 2;
+}
+
+.ba {
+	border: dotted 2px red;
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.bb {
+	border: dotted 2px green;
+	grid-column: 1;
+	grid-row: 2;
+}
+
+.bc {
+	border: dotted 2px blue;
+	grid-column: 1;
+	grid-row: 3;
+}
+
+.bd {
+	border: dotted 2px yellow;
+	grid-column: 1;
+	grid-row: 4;
+}
+
+.footer {
+	font-size: 0.8em;
 }
 
 
 #lactose {
-   text-transform: uppercase;
+   font-weight: bold;
 }
 
 #gluten {
-   text-transform: uppercase;
+   font-weight: bold;
 }
 
 button:hover{

@@ -1,0 +1,41 @@
+@charset "UTF-8";
+@import url("reset.css");
+@import url("https://fonts.googleapis.com/css?family=Droid+Serif|Share+Tech+Mono");
+
+body {
+	font-family: 'Syne Mono',"Droid Serif", monospace;
+    font-size: 12pt;
+
+}
+
+a, strong, em {
+    color: #0099ff;
+}
+
+p.info,
+#login p {
+    width: 80%;
+    margin: 1vw auto;
+}
+
+.mainclass {
+   color: #ff5500;
+}
+
+#wtbb {
+	color: white;
+	background: black;
+}
+
+
+#lactose {
+   text-transform: uppercase;
+}
+
+#gluten {
+   text-transform: uppercase;
+}
+
+button:hover{
+	background: blue;
+}
