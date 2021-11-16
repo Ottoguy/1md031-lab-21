@@ -16,7 +16,6 @@ body {
 header {
 	border: solid 2px yellow !important;
 	overflow: hidden;
-	margin-top: -100;
 }
 
 h1 {
@@ -47,25 +46,25 @@ h4 {
 	text-align: center;
 }
 
-p{
+p {
 	width: 100%;
 	text-align: center;
 }
 
-ul{
+ul {
 	width: 100%;
 	text-align: center;
 }
 
-label{
+label {
 	font-size: 1.5em !important;
 }
-
 
 #banner {
 	width: 100%;
 	height: auto;
-	opacity: 50%;
+	opacity: 70%;
+		margin-top: -100;
 }
 
 .a {
@@ -150,15 +149,14 @@ label{
 	font-size: 0.8em;
 }
 
-
 #lactose {
-   font-weight: bold;
+	font-weight: bold;
 }
 
 #gluten {
-   font-weight: bold;
+	font-weight: bold;
 }
 
-button:hover{
+button:hover {
 	background: blue;
 }

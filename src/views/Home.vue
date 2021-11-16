@@ -8,6 +8,13 @@
   <div id="map" v-on:click="addOrder">
     click here
   </div>
+
+<!-- Dynamic text -->
+<input type="text" v-model="yourVariable">
+<div>
+  {{ yourVariable }}
+</div>
+
 </template>
 
 <script>
@@ -23,6 +30,7 @@ export default {
   },
   data: function () {
     return {
+            yourVariable: 'Välj en burgare',
       burgers: [ {name: "small burger", kCal: 250},
                  {name: "standard burger", kCal: 450},
                  {name: "large burger", kCal: 850}

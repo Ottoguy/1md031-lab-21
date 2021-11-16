@@ -1,123 +1,17 @@
-<!DOCTYPE HTML>
-<html lang="en">
-<head>
-<title>Virtual Burger World</title>
-<meta charset="utf-8" />
-<link rel="stylesheet" type="text/css" href="reset.css">
-<link rel="stylesheet" type="text/css" href="style.css">
-<style>
-@import url("reset.css");
-
-@import
-	url("https://fonts.googleapis.com/css2?family=Syne+Mono&display=swap");
-</style>
-</head>
-
-<body>
-	<header>
-		<h1>Enter Virtual Burger World</h1>
-		<p><img id="banner" src="/img/tp_banner.jpg" alt="Banner"
-			title="TP"></p>
-
-</header>
-
-	<main>
-		<section class="a">
-			<section class="aa">
-				<h2>Select burger</h2>
-				<h4>Choose your last meal</h4>
-			</section>
-			<section class="ab">
-				<h3>The Pus Burger</h3>
-				<p><img
-					src="https://static.wikia.nocookie.net/spongebob/images/b/b9/Nasty_Patty_061.png"
-					alt="Span" title="Yummy" style="width: 300px;"></p>
-				<ul>
-					<li>Is a self-sustaining ecosystem</li>
-					<li>Will actually kill you</li>
-					<li>May contain traces of <span id="lactose">lactose</span></li>
-				</ul>
-			</section>
-			<section class="ac">
-				<h3>The Blight Burger</h3>
-				<p><img
-					src="https://www.adweek.com/wp-content/uploads/2020/02/burger-king-moldy-whopper-2020.jpg"
-					alt="Span" title="Yummy" style="width: 300px;"></p>
-				<ul>
-					<li>Contains over 95% of all diseases known to man</li>
-					<li>You will literally turn inside out</li>
-					<li>Contains <span id="gluten">gluten</span></li>
-				</ul>
-				</div>
-			</section>
-			<section class="ad">
-				<h3>The Eternal Darkness Will Envelop Us All-Burger</h3>
-				<p><img src="https://pbs.twimg.com/media/BxU_pGYIEAEUAzG.jpg"
-					alt="Span" title="Yummy" style="width: 300px;"></p>
-				<ul>
-					<li>Universal heat death is drawing ever closer</li>
-					<li>The futility of our actions cannot be understated</li>
-					<li>Even surrounded by others, we all die alone</li>
-				</ul>
-			</section>
-		</section>
-
-		<section class="b">
-			<section class="ba">
-				<h2>Customer information</h2>
-				<h4>This is where you provide necessary information</h4>
-			</section>
-			<section class="bb">
-				<h3>Delivery information</h3>
-				<form>
-					<label for="name">First- and last name</label><br> <input
-						type="text" id="name" name="name"><br>
-				</form>
-				<form>
-					<label for="email">Email address</label><br> <input
-						type="email" id="email" name="email"><br>
-				</form>
-				<form>
-					<label for="street">Street name</label><br> <input type="text"
-						id="street" name="street"><br>
-				</form>
-				<form>
-					<label for="number">House number</label><br> <input
-						type="number" id="number" name="number"><br>
-				</form>
-			</section>
-			<section class="bc">
-				<label for="payment">Payment method:</label> <select
-					name="Payment option" id="payment">
-					<option value="card">Card</option>
-					<option value="servitude">Indebted servitude</option>
-					<option value="nature">In nature</option>
-					<option value="serfdom">Serfdom</option>
-				</select>
-
-			</section>
-			<section class="bd">
-				<h4>Gender:</h4>
-				  <input type="radio" id="male" name="gender" value="Male">
-				  <label for="male">Male</label>   <input type="radio" id="female"
-					name="gender" value="Female">   <label for="female">Female</label>
-				  <input type="radio" id="other" name="gender" value="Other">
-				  <label for="other">Other</label>
-			</section>
-		</section>
-		<section class="c">
-			<button type="submit">
-				<img
-					src="https://educaora.com/api/editors/6176786d68d9913b4bb2739c/published-files/image_button.png">
-			</button>
-		</section>
-</main>
-
-	<footer class="footer">
-		<hr>
-		<p>We do not take responsibility for adverse effects of ingesting
-			our food.</p>
-</footer>
-</body>
-
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title><%= htmlWebpackPlugin.options.title %></title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
