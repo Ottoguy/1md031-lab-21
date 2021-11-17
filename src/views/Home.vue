@@ -16,8 +16,10 @@
                                 v-bind:key="burger.name"
                                 v-on:orderedBurger="addToOrder($event)"/>
                       </div>
+                      <div id="map-container">
                       <div id="map" v-on:click="addOrder">
                         click here
+                      </div>
                       </div>
 
                                     <!-- Dynamic text -->
@@ -309,9 +311,16 @@
               background: blue;
             }
 
-                      #map {
-                        width: 300px;
-                        height: 300px;
-                        background-color: red;
-                      }
-                    </style>
+            #map-container{
+              width: 95vw;
+              height: 40vw;
+              overflow:scroll;
+            }
+
+            #map {
+              width: 1920px;
+              height: 1078px;
+              background-color: red;
+              background: url("polacks.jpg");
+            }
+        </style>
