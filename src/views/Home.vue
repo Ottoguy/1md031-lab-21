@@ -8,6 +8,24 @@
               </header>
 
                 <main>
+
+                  <div>
+                        Burgers
+                        <Burger v-for="burger in burgers"
+                                v-bind:burger="burger" 
+                                v-bind:key="burger.name"
+                                v-on:orderedBurger="addToOrder($event)"/>
+                      </div>
+                      <div id="map" v-on:click="addOrder">
+                        click here
+                      </div>
+
+                                    <!-- Dynamic text -->
+                    <input type="text" v-model="yourVariable">
+                    <div>
+                      {{ yourVariable }}
+                    </div>
+
                   <section class="b">
                     <section class="ba">
                       <h2>Customer information</h2>
@@ -61,21 +79,6 @@
                     our food.</p>
               </footer>
 
-                      <div>
-                        Burgers
-                        <Burger v-for="burger in burgers"
-                                v-bind:burger="burger" 
-                                v-bind:key="burger.name"/>
-                      </div>
-                      <div id="map" v-on:click="addOrder">
-                        click here
-                      </div>
-
-                                    <!-- Dynamic text -->
-                    <input type="text" v-model="yourVariable">
-                    <div>
-                      {{ yourVariable }}
-                    </div>
                     </div>
 
                     </template>
@@ -118,12 +121,16 @@
                       },
                       data: function () {
                         return {
-                                yourVariable: 'Välj en burgare',
+                          yourVariable: 'Välj en burgare',
                           burgers: burgerArray
                         }
                       },
                       methods: {
-                      
+                        addToOrder: function (event) {
+                          this.orderedBurgers = [];
+                          this.orderedBurgers[event.name] = event.amount;
+                          console.log(this.orderedBurgers);
+                        },    
                         getOrderNumber: function () {
                           return Math.floor(Math.random()*100000);
                         },

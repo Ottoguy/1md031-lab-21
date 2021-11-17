@@ -15,12 +15,10 @@
                   </section>
                   <section class="burger">
                     <button type="submit" v-on:click="burgerAdd">
-                      <img
-                        src="https://educaora.com/api/editors/6176786d68d9913b4bb2739c/published-files/image_button.png">
+                      +
                     </button>
                     <button type="submit" v-on:click="burgerRemove">
-                      <img
-                        src="https://educaora.com/api/editors/6176786d68d9913b4bb2739c/published-files/image_button.png">
+                      -
                     </button>
                   </section>
       </div>
@@ -40,14 +38,22 @@
       },
       methods: {
         burgerAdd: function (){
-                      this.amountOrdered++;
-                     }, 
+          this.amountOrdered++;
+          this.$emit('orderedBurger',
+            { name:   this.burger.name, 
+              amount: this.amountOrdered 
+            });
+        }, 
         burgerRemove: function (){
           if (this.amountOrdered >= 1){
                 this.amountOrdered--;
+                this.$emit('orderedBurger',
+                  { name:   this.burger.name, 
+                   amount: this.amountOrdered 
+                  });
             }
                       
-                     }
+        }
       }
     }
     </script>
@@ -87,6 +93,14 @@
                 grid-row: 1;
                 display: grid;
                 grid-gap: 10px;
+              }
+
+              button {
+              background-color: green;
+              color: white;
+              padding: 5px 5px;
+              text-align: center;
+              font-size: 3em;
               }
 
               #lactose {
