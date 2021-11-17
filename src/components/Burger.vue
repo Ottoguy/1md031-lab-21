@@ -8,7 +8,7 @@
                       src= "{{ burger.imgUrl }}"
                       alt="Span" title="Yummy" style="width: 300px;"></p>
                     <ul>
-                      <li>{{ burger.kCal }}</li>
+                      <li>{{ burger.kCal }} kCal</li>
                       <li>{{ burger.line1 }}</li>
                       <li>{{ burger.line2 }}</li>
                       <li>{{ burger.line3 }}</li>
