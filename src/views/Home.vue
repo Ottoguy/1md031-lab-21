@@ -17,16 +17,15 @@
                                 v-on:orderedBurger="addToOrder($event)"/>
                       </div>
                       <div id="map-container">
-                      <div id="map" v-on:click="addOrder">
-                        click here
+                        <div id="map" v-on:click="setLocation">
+                        <div id="dots" v-bind:style="{left: location.x + 'px', top: location.y + 'px'}">
+                         T
+                        </div>
+                        </div>
                       </div>
-                      </div>
-
-                                    <!-- Dynamic text -->
-                    <input type="text" v-model="yourVariable">
-                    <div>
-                      {{ yourVariable }}
-                    </div>
+                      <button v-on:click="socketTalk" type="submit">
+                        Confirm Order
+                      </button>
 
                   <section class="b">
                     <section class="ba">
@@ -42,14 +41,6 @@
                       <form>
                         <label for="email">Email address</label><br> <input
                           type="email" id="email" name="email"><br>
-                      </form>
-                      <form>
-                        <label for="street">Street name</label><br> <input type="text"
-                          id="street" name="street"><br>
-                      </form>
-                      <form>
-                        <label for="number">House number</label><br> <input
-                          type="number" id="number" name="number"><br>
                       </form>
                     </section>
                     <section class="bc">
@@ -124,7 +115,8 @@
                       data: function () {
                         return {
                           yourVariable: 'Välj en burgare',
-                          burgers: burgerArray
+                          burgers: burgerArray,
+                          location:{x:0, y:0}
                         }
                       },
                       methods: {
@@ -136,16 +128,20 @@
                         getOrderNumber: function () {
                           return Math.floor(Math.random()*100000);
                         },
-                        addOrder: function (event) {
-                          var offset = {x: event.currentTarget.getBoundingClientRect().left,
-                                        y: event.currentTarget.getBoundingClientRect().top};
+                        setLocation: function (){
+                          const offset=event.target.getBoundingClientRect();
+                          this.location.x = event.clientX-offset.left-10;
+                          this.location.y = event.clientY-offset.top-10;
+
+                        },
+                        socketTalk: function (){
+                          console.log(this.location);
                           socket.emit("addOrder", { orderId: this.getOrderNumber(),
-                                                    details: { x: event.clientX - 10 - offset.x,
-                                                              y: event.clientY - 10 - offset.y },
-                                                    orderItems: ["Beans", "Curry"]
+                                                    details: { x: this.location.x,
+                                                              y: this.location.y }
                                                   }
                                     );
-                        }
+                        },
                       }
                     }
                     </script>
@@ -311,16 +307,35 @@
               background: blue;
             }
 
+            button{
+              background: green;
+              font-weight: bold;
+              font-size: 2em;
+            }
+
             #map-container{
-              width: 95vw;
-              height: 40vw;
+              width: 70vw;
+              height: 30vw;
               overflow:scroll;
+              position: relative;
             }
 
             #map {
               width: 1920px;
               height: 1078px;
-              background-color: red;
               background: url("polacks.jpg");
             }
+
+
+#curse {
+  position: absolute;
+  background: none!important;
+  color: white;
+  border-radius: 10px;
+  width:20px;
+  height:20px;
+  text-align: center;
+}
+
+
         </style>

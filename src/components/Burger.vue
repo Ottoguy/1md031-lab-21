@@ -41,7 +41,9 @@
           this.amountOrdered++;
           this.$emit('orderedBurger',
             { name:   this.burger.name, 
-              amount: this.amountOrdered 
+              amount: this.amountOrdered,
+              location:{ x: 0, y: 0
+              }
             });
         }, 
         burgerRemove: function (){
@@ -49,7 +51,9 @@
                 this.amountOrdered--;
                 this.$emit('orderedBurger',
                   { name:   this.burger.name, 
-                   amount: this.amountOrdered 
+                   amount: this.amountOrdered,
+                   location:{ x: 0, y: 0
+                    } 
                   });
             }
                       
