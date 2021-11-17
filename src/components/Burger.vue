@@ -2,17 +2,26 @@
       <div>
         {{ burger.name }} {{ burger.kCal }} 
 
-    <section class="a">
+    <section class="burger">
                     <h3>{{ burger.name }}</h3>
-                    <p><img
-                      src= "{{ burger.imgUrl }}"
-                      alt="Span" title="Yummy" style="width: 300px;"></p>
+                    <img v-bind:src= "burger.imgUrl">
                     <ul>
                       <li>{{ burger.kCal }} kCal</li>
                       <li>{{ burger.line1 }}</li>
                       <li>{{ burger.line2 }}</li>
                       <li>{{ burger.line3 }}</li>
+                      <li>Amount ordered: {{this.amountOrdered}}</li>
                     </ul>
+                  </section>
+                  <section class="burger">
+                    <button type="submit" v-on:click="burgerAdd">
+                      <img
+                        src="https://educaora.com/api/editors/6176786d68d9913b4bb2739c/published-files/image_button.png">
+                    </button>
+                    <button type="submit" v-on:click="burgerRemove">
+                      <img
+                        src="https://educaora.com/api/editors/6176786d68d9913b4bb2739c/published-files/image_button.png">
+                    </button>
                   </section>
       </div>
       
@@ -23,6 +32,22 @@
       name: 'Burger',
       props: {
         burger: Object
+      },
+      data: function () {
+        return {
+          amountOrdered: 0,
+        }
+      },
+      methods: {
+        burgerAdd: function (){
+                      this.amountOrdered++;
+                     }, 
+        burgerRemove: function (){
+          if (this.amountOrdered >= 1){
+                this.amountOrdered--;
+            }
+                      
+                     }
       }
     }
     </script>
@@ -52,7 +77,7 @@
                 text-align: center;
               }
 
-              .a {
+              .burger {
                 border: solid 2px red;
                 color: white;
                 background: black;
