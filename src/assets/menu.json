@@ -1,0 +1,32 @@
+[
+  {
+    "name": "Pus Burger",
+	"kCal": 500,
+	"gluten": false,
+    "lactose": true,
+	"imgUrl": "https://static.wikia.nocookie.net/spongebob/images/b/b9/Nasty_Patty_061.png",
+	"line1": "Is a self-sustaining ecosystem",
+	"line2": "Will actually kill you",
+	"line3": "May contain traces of lactose"
+  },
+  {
+    "name": "Blight Burger",
+	"kCal": 600,
+	"gluten": true,
+    "lactose": false,
+	"imgUrl": "https://www.adweek.com/wp-content/uploads/2020/02/burger-king-moldy-whopper-2020.jpg",
+	"line1": "Contains over 95% of all diseases known to man",
+	"line2": "You will literally turn inside out",
+	"line3": "Contains gluten"
+  },
+  {
+    "name": "The Eternal Darkness Will Devour Us All-Burger",
+	"kCal": 999,
+	"gluten": false,
+    "lactose": false,
+	"imgUrl": "https://pbs.twimg.com/media/BxU_pGYIEAEUAzG.jpg",
+	"line1": "Universal heat death is drawing ever closer",
+	"line2": "The futility of our actions cannot be understated",
+	"line3": "Even surrounded by others, we all die alone"
+  }
+]
