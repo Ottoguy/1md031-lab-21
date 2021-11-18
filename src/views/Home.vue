@@ -8,13 +8,14 @@
               </header>
 
                 <main>
-
-                  <div>
-                        Burgers
+                  <div id="choose">
+                    <h2>Choose Your Burger</h2>
+                  <div class="burgerView">
                         <Burger v-for="burger in burgers"
                                 v-bind:burger="burger" 
                                 v-bind:key="burger.name"
                                 v-on:orderedBurger="addToOrder($event)"/>
+                      </div>
                       </div>
                       <div id="map-container">
                         <div id="map" v-on:click="setLocation">
@@ -36,16 +37,16 @@
                       <h3>Delivery information</h3>
                       <form>
                         <label for="name">First- and last name</label><br> <input
-                          type="text" id="name" name="name"><br>
+                          type="text" id="name" name="name" v-model="name"><br>
                       </form>
                       <form>
                         <label for="email">Email address</label><br> <input
-                          type="email" id="email" name="email"><br>
+                          type="email" id="email" name="email" v-model="email"><br>
                       </form>
                     </section>
                     <section class="bc">
                       <label for="payment">Payment method:</label> <select
-                        name="Payment option" id="payment">
+                        name="Payment option" id="payment" v-model="payment">
                         <option value="card">Card</option>
                         <option value="servitude">Indebted servitude</option>
                         <option value="nature">In nature</option>
@@ -55,11 +56,11 @@
                     </section>
                     <section class="bd">
                       <h4>Gender:</h4>
-                      <input type="radio" id="male" name="gender" value="Male">
+                      <input type="radio" id="male" name="gender" value="Male" v-model="gender">
                       <label for="male">Male</label>
-                      <input type="radio" id="female" name="gender" value="Female">
+                      <input type="radio" id="female" name="gender" value="Female" v-model="gender">
                       <label for="female">Female</label>
-                      <input type="radio" id="other" name="gender" value="Other">
+                      <input type="radio" id="other" name="gender" value="Other" v-model="gender">
                       <label for="other">Other</label>
                     </section>
                   </section>
@@ -116,7 +117,8 @@
                         return {
                           yourVariable: 'Välj en burgare',
                           burgers: burgerArray,
-                          location:{x:0, y:0}
+                          location:{x:0, y:0},
+                          orderedBurgers:{PusBurger: 0, BlightBurger: 0, DarkBurger: 0}
                         }
                       },
                       methods: {
@@ -136,9 +138,15 @@
                         },
                         socketTalk: function (){
                           console.log(this.location);
+                          console.log(this.orderedBurgers)
                           socket.emit("addOrder", { orderId: this.getOrderNumber(),
                                                     details: { x: this.location.x,
-                                                              y: this.location.y }
+                                                              y: this.location.y },
+                                                              orderItems: this.orderedBurgers,
+                                                              personalInfo:{ name: this.name,
+                                                              email: this.email,
+                                                             gender: this.gender,
+                                                              payment: this.payment}
                                                   }
                                     );
                         },
@@ -336,6 +344,21 @@
   height:20px;
   text-align: center;
 }
+
+.burgerView {
+       display: grid;
+       grid-gap: 10px;
+       margin-left: 10px;
+       grid-template-columns: 400px 400px 400px ;
+      background-color: black;
+      color: white;
+      padding: 6px;
+   }
+
+   #choose{
+     background-color: black;
+     color: white;
+   }
 
 
         </style>

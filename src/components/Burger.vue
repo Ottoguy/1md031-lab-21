@@ -1,10 +1,10 @@
     <template>
       <div>
-        {{ burger.name }} {{ burger.kCal }} 
-
     <section class="burger">
                     <h3>{{ burger.name }}</h3>
+                    <div id="imgWrap">
                     <img v-bind:src= "burger.imgUrl">
+                    </div>
                     <ul>
                       <li>{{ burger.kCal }} kCal</li>
                       <li>{{ burger.line1 }}</li>
@@ -105,6 +105,7 @@
               padding: 5px 5px;
               text-align: center;
               font-size: 3em;
+              width: 50px;
               }
 
               #lactose {
@@ -114,5 +115,19 @@
               #gluten {
                 font-weight: bold;
               }
+
+              img{
+                max-width:100%;
+                max-height:100%;
+              }
+
+              #imgWrap{
+                 height: 250px;
+                 width: 300px;
+                 display: block;
+                  margin-left: auto;
+                margin-right: auto;
+              }
+
 
     </style>
