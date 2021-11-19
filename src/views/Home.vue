@@ -17,18 +17,8 @@
                                 v-on:orderedBurger="addToOrder($event)"/>
                       </div>
                       </div>
-                      <div id="map-container">
-                        <div id="dots" v-on:click="setLocation">
-                        <div id="dots" v-bind:style="{left: location.x + 'px', top: location.y + 'px'}">
-                         T
-                        </div>
-                        </div>
-                      </div>
-                      <button v-on:click="socketTalk" type="submit">
-                        Confirm Order
-                      </button>
 
-                  <section class="b">
+ <section class="b">
                     <section class="ba">
                       <h2>Customer information</h2>
                       <h4>This is where you provide necessary information</h4>
@@ -45,7 +35,7 @@
                       </form>
                     </section>
                     <section class="bc">
-                      <label for="payment">Payment method:</label> <select
+                      <label for="payment">Payment method:</label><br> <select
                         name="Payment option" id="payment" v-model="payment">
                         <option value="card">Card</option>
                         <option value="servitude">Indebted servitude</option>
@@ -64,6 +54,19 @@
                       <label for="other">Other</label>
                     </section>
                   </section>
+
+                      <div id="map-container">
+                        <div id="dots" v-on:click="setLocation">
+                        <div id="dots" v-bind:style="{left: location.x + 'px', top: location.y + 'px'}">
+                         T
+                        </div>
+                        </div>
+                      </div>
+                      <button v-on:click="socketTalk" type="submit">
+                        Confirm Order
+                      </button>
+
+                 
                   
               </main>
 
@@ -221,10 +224,8 @@
             }
 
             .a {
-              border: solid 2px red;
               color: white;
               background: black;
-              border-radius: 5px;
               padding: 20px;
               grid-column: 1;
               grid-row: 1;
@@ -233,8 +234,6 @@
             }
 
             .b {
-              border: solid 2px green;
-              border-radius: 5px;
               padding: 20px;
               grid-column: 1;
               grid-row: 2;
@@ -243,59 +242,53 @@
             }
 
             .c {
-              border: solid 2px blue;
-              border-radius: 5px;
               padding: 20px;
               grid-column: 3;
               grid-row: 3;
             }
 
             .aa {
-              border: dotted 2px yellow;
               grid-column: 1/span 3;
               grid-row: 1;
             }
 
             .ab {
-              border: dotted 2px red;
               grid-column: 1;
               grid-row: 2;
             }
 
             .ac {
-              border: dotted 2px green;
               grid-column: 2;
               grid-row: 2;
             }
 
             .ad {
-              border: dotted 2px blue;
               grid-column: 3;
               grid-row: 2;
             }
 
             .ba {
-              border: dotted 2px red;
               grid-column: 1;
               grid-row: 1;
             }
 
             .bb {
-              border: dotted 2px green;
               grid-column: 1;
               grid-row: 2;
+              text-align: center;
             }
 
             .bc {
-              border: dotted 2px blue;
               grid-column: 1;
               grid-row: 3;
+              text-align: center;
+
             }
 
             .bd {
-              border: dotted 2px yellow;
               grid-column: 1;
               grid-row: 4;
+              text-align: center;
             }
 
             .footer {
@@ -318,13 +311,16 @@
               background: green;
               font-weight: bold;
               font-size: 2em;
+              position: relative;
+              left: 42%;
             }
 
             #map-container{
-              width: 70vw;
+              width: 90vw;
               height: 30vw;
               overflow:scroll;
               position: relative;
+              left: 3%;
             }
 
 #curse {

@@ -14,10 +14,10 @@
                     </ul>
                   </section>
                   <section class="burger">
-                    <button type="submit" v-on:click="burgerAdd">
+                    <button type="submit" v-on:click="burgerAdd" id="plus">
                       +
                     </button>
-                    <button type="submit" v-on:click="burgerRemove">
+                    <button type="submit" v-on:click="burgerRemove" id="minus">
                       -
                     </button>
                   </section>
@@ -99,8 +99,21 @@
                 grid-gap: 10px;
               }
 
-              button {
+              #plus {
+                position: relative;
+                left: 30%;
               background-color: green;
+              color: white;
+              padding: 5px 5px;
+              text-align: center;
+              font-size: 3em;
+              width: 50px;
+              }
+              #minus {
+              position: relative;
+              left: 60%;
+              top: -74px;  
+              background-color: red;
               color: white;
               padding: 5px 5px;
               text-align: center;
