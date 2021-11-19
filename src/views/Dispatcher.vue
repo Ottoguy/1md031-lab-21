@@ -2,7 +2,7 @@
   <div id="orders">
     <div id="orderList">
       <div v-for="(order, key) in orders" v-bind:key="'order'+key">
-        Order:{{key}}: {{order}},
+        Order:{{key}}, {{order.orderItems}}<br>,
         Name: {{order.personalInfo.name}},
          E-Mail: {{order.personalInfo.email}},
          Gender: {{order.personalInfo.gender}},

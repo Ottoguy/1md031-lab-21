@@ -18,7 +18,7 @@
                       </div>
                       </div>
                       <div id="map-container">
-                        <div id="map" v-on:click="setLocation">
+                        <div id="dots" v-on:click="setLocation">
                         <div id="dots" v-bind:style="{left: location.x + 'px', top: location.y + 'px'}">
                          T
                         </div>
@@ -118,13 +118,12 @@
                           yourVariable: 'Välj en burgare',
                           burgers: burgerArray,
                           location:{x:0, y:0},
-                          orderedBurgers:{PusBurger: 0, BlightBurger: 0, DarkBurger: 0}
+                          orderedBurgers:{/*PusBurger: 0, BlightBurger: 0, DarkBurger: 0*/}
                         }
                       },
                       methods: {
                         addToOrder: function (event) {
-                          this.orderedBurgers = [];
-                          this.orderedBurgers[event.name] = event.amount;
+                            this.orderedBurgers[event.name] = event.amount;
                           console.log(this.orderedBurgers);
                         },    
                         getOrderNumber: function () {
@@ -328,13 +327,6 @@
               position: relative;
             }
 
-            #map {
-              width: 1920px;
-              height: 1078px;
-              background: url("polacks.jpg");
-            }
-
-
 #curse {
   position: absolute;
   background: none!important;
@@ -359,6 +351,27 @@
      background-color: black;
      color: white;
    }
+
+   #dots {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  background: url(/img/polacks.jpg);
+  background-repeat: no-repeat;
+  width:1920px;
+  height: 1078px;
+  cursor: crosshair;
+}
+
+#dots div {
+  position: absolute;
+  background: black;
+  color: white;
+  border-radius: 10px;
+  width:20px;
+  height:20px;
+  text-align: center;
+}
 
 
         </style>
